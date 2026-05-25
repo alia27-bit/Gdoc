@@ -45,9 +45,7 @@
     @if($documents->count() > 0)
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         @foreach($documents as $document)
-        <a href="{{ route('documents.show', $document->uuid) }}"
-           class="document-card group"
-           id="doc-{{ $document->uuid }}">
+        <div class="document-card group cursor-pointer" id="doc-{{ $document->uuid }}" onclick="window.location='{{ route('documents.show', $document->uuid) }}'">
             <div class="h-40 rounded-t-xl bg-white/[0.02] border-b border-white/5 p-4 overflow-hidden relative">
                 <div class="text-xs text-gray-500 leading-relaxed line-clamp-6">
                     {!! Str::limit(strip_tags($document->content), 300, '...') !!}
@@ -81,6 +79,15 @@
                     </span>
                     @endif
                 </div>
+
+                <div class="mt-4 flex items-center gap-2">
+                    <a href="{{ route('documents.history', $document->uuid) }}" onclick="event.stopPropagation();" class="btn-ghost text-xs px-2 py-1 rounded-md flex items-center gap-2">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Riwayat</span>
+                    </a>
+                </div>
             </div>
 
             @if($document->owner_id === Auth::id())
@@ -97,7 +104,7 @@
                 </form>
             </div>
             @endif
-        </a>
+        </div>
         @endforeach
     </div>
     @else

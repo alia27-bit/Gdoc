@@ -662,6 +662,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    if (versionSidebar) {
+        const url = new URL(window.location.href)
+        if (url.searchParams.get('open_history') === '1') {
+            versionSidebar.classList.remove('hidden')
+            loadVersions()
+        }
+    }
+
     if (closeVersionsBtn && versionSidebar) {
         closeVersionsBtn.addEventListener('click', () => {
             versionSidebar.classList.add('hidden')
