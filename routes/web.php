@@ -19,8 +19,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/documents/{uuid}/versions', [DocumentController::class, 'versions'])->name('documents.versions');
     Route::post('/documents/{uuid}/versions', [DocumentController::class, 'saveVersion'])->name('documents.saveVersion');
     Route::post('/documents/{uuid}/versions/{version}/restore', [DocumentController::class, 'restoreVersion'])->name('documents.versions.restore');
+<<<<<<< HEAD
     Route::get('/documents/{uuid}/history', [DocumentController::class, 'history'])->name('documents.history');
     Route::post('/documents/{uuid}/versions/{version}/restore-page', [DocumentController::class, 'restoreVersionPage'])->name('documents.versions.restore.page');
+=======
+>>>>>>> restore-old
     Route::post('/documents/{uuid}/save', [DocumentController::class, 'save']);
 });
 

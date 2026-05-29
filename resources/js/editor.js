@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const config = window.editorConfig
 
+<<<<<<< HEAD
+=======
+    // ── Quill Init ──────────────────────────────────────────────────────
+>>>>>>> restore-old
     const quill = new Quill('#editor', {
         theme: 'snow',
 
@@ -28,8 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cursors = quill.getModule('cursors')
 
+<<<<<<< HEAD
     const remoteCursorLayer = document.createElement('div')
     remoteCursorLayer.className = 'remote-cursors-layer'
+=======
+    // ── Remote cursor layer ─────────────────────────────────────────────
+    const remoteCursorLayer = document.createElement('div')
+    remoteCursorLayer.className = 'remote-cursors-layer'
+    // Append to the ql-editor's parent so it shares the same coordinate system
+>>>>>>> restore-old
     quill.root.parentNode.appendChild(remoteCursorLayer)
 
     let applyingRemoteChange = false
@@ -39,6 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const remoteUsers = new Map()
     const connectionBadge = document.getElementById('connection-badge')
 
+<<<<<<< HEAD
+=======
+    // ── Helpers ─────────────────────────────────────────────────────────
+>>>>>>> restore-old
     const normalizeRange = (range) => {
         if (!range) return null
 
@@ -90,6 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return true
     }
 
+<<<<<<< HEAD
+=======
+    // ── Save Status Indicator ───────────────────────────────────────────
+>>>>>>> restore-old
     const saveIndicator = document.getElementById('save-indicator')
     const saveText = document.getElementById('save-text')
 
@@ -108,7 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+<<<<<<< HEAD
 
+=======
+    // ── Remote Cursors ──────────────────────────────────────────────────
+>>>>>>> restore-old
     const ensureRemoteCursor = (data) => {
         const userId = String(data.userId)
         const user = remoteUsers.get(userId)
@@ -138,6 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const user = remoteUsers.get(userId)
 
+<<<<<<< HEAD
+=======
+        // getBounds returns coords relative to ql-editor, accounting for scroll
+>>>>>>> restore-old
         const bounds = quill.getBounds(range.index + range.length)
         if (!bounds) return
 
@@ -154,15 +181,27 @@ document.addEventListener('DOMContentLoaded', () => {
             remoteCursorLayer.appendChild(cursor)
         }
 
+<<<<<<< HEAD
+=======
+        // Update position — CSS transition handles smooth movement
+>>>>>>> restore-old
         cursor.style.transform = `translate(${bounds.left}px, ${bounds.top}px)`
         cursor.style.setProperty('--remote-cursor-color', user.color)
         cursor.querySelector('.remote-cursor-caret').style.height = `${Math.max(bounds.height, 18)}px`
 
+<<<<<<< HEAD
+=======
+        // Update flag name text
+>>>>>>> restore-old
         const flag = cursor.querySelector('.remote-cursor-flag')
         if (flag) {
             flag.textContent = user.name
             flag.style.background = user.color
 
+<<<<<<< HEAD
+=======
+            // Show flag briefly then auto-hide
+>>>>>>> restore-old
             flag.classList.add('remote-cursor-flag--visible')
             clearTimeout(cursor._flagTimer)
             cursor._flagTimer = setTimeout(() => {
@@ -193,6 +232,10 @@ document.addEventListener('DOMContentLoaded', () => {
         pointer.style.setProperty('--remote-cursor-color', user.color)
         pointer.querySelector('.remote-pointer-label').textContent = user.name
 
+<<<<<<< HEAD
+=======
+        // Auto-hide pointer after inactivity
+>>>>>>> restore-old
         clearTimeout(pointer._hideTimer)
         pointer.style.opacity = '1'
         pointer._hideTimer = setTimeout(() => {
@@ -231,10 +274,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+<<<<<<< HEAD
+=======
+    // ── Load initial content ────────────────────────────────────────────
+>>>>>>> restore-old
     if (config.content) {
         quill.root.innerHTML = config.content
     }
 
+<<<<<<< HEAD
     const getRealtimeHost = () => {
         const hostname = window.location.hostname
 
@@ -245,12 +293,19 @@ document.addEventListener('DOMContentLoaded', () => {
         return hostname
     }
 
+=======
+    // ── WebSocket Connection ────────────────────────────────────────────
+>>>>>>> restore-old
     const connectRealtime = () => {
         clearTimeout(reconnectTimeout)
         setConnectionStatus('connecting')
 
         const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws'
+<<<<<<< HEAD
         const socketHost = getRealtimeHost()
+=======
+        const socketHost = '127.0.0.1'
+>>>>>>> restore-old
         const socketUrl = `${protocol}://${socketHost}:6001/document.${config.documentUuid}`
 
         socket = new WebSocket(socketUrl)
@@ -331,7 +386,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     connectRealtime()
 
+<<<<<<< HEAD
 
+=======
+    // ── Editor Events ───────────────────────────────────────────────────
+>>>>>>> restore-old
     quill.on('editor-change', () => {
         requestAnimationFrame(updateRemoteCursorPositions)
     })
@@ -392,6 +451,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+<<<<<<< HEAD
+=======
+    // ── Auto Save ───────────────────────────────────────────────────────
+>>>>>>> restore-old
     let saveTimeout = null
 
     function autoSave() {
@@ -429,6 +492,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000)
     }
 
+<<<<<<< HEAD
+=======
+    // ── Document Title Rename ───────────────────────────────────────────
+>>>>>>> restore-old
     const titleInput = document.getElementById('document-title')
 
     if (titleInput) {
@@ -466,6 +533,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+<<<<<<< HEAD
+=======
+    // ── Share Button ────────────────────────────────────────────────────
+>>>>>>> restore-old
     const shareBtn = document.getElementById('share-btn')
     const shareToast = document.getElementById('share-toast')
 
@@ -484,6 +555,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 2500)
                 }
             } catch {
+<<<<<<< HEAD
+=======
+                // Fallback for older browsers
+>>>>>>> restore-old
                 const textarea = document.createElement('textarea')
                 textarea.value = window.location.href
                 document.body.appendChild(textarea)
@@ -499,6 +574,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+<<<<<<< HEAD
+=======
+    // ── Save Version Button ─────────────────────────────────────────────
+>>>>>>> restore-old
     const saveVersionBtn = document.getElementById('save-version-btn')
 
     if (saveVersionBtn) {
@@ -525,6 +604,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     saveVersionBtn.style.opacity = '1'
 
                     if (data.success) {
+<<<<<<< HEAD
+=======
+                        // Show a brief toast
+>>>>>>> restore-old
                         if (shareToast) {
                             shareToast.textContent = `Versi ${data.version_number} tersimpan!`
                             shareToast.style.opacity = '1'
@@ -536,6 +619,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             }, 2500)
                         }
 
+<<<<<<< HEAD
+=======
+                        // Refresh sidebar if open
+>>>>>>> restore-old
                         const sidebar = document.getElementById('version-sidebar')
                         if (sidebar && !sidebar.classList.contains('hidden')) {
                             loadVersions()
@@ -549,6 +636,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+<<<<<<< HEAD
+=======
+    // ── Version History Sidebar ─────────────────────────────────────────
+>>>>>>> restore-old
     const versionHistoryBtn = document.getElementById('version-history-btn')
     const closeVersionsBtn = document.getElementById('close-versions-btn')
     const versionSidebar = document.getElementById('version-sidebar')
@@ -594,6 +685,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `).join('')
 
+<<<<<<< HEAD
+=======
+                // Attach restore handlers
+>>>>>>> restore-old
                 versionsList.querySelectorAll('.restore-version-btn').forEach(btn => {
                     btn.addEventListener('click', (e) => {
                         e.stopPropagation()
@@ -619,6 +714,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 if (data.success) {
                                     quill.root.innerHTML = data.content
 
+<<<<<<< HEAD
+=======
+                                    // Broadcast the restored content to others
+>>>>>>> restore-old
                                     sendRealtimeMessage({
                                         type: 'typing',
                                         delta: quill.getContents(),

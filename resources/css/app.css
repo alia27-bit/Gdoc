@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import "tailwindcss";
+=======
+@import 'tailwindcss';
+>>>>>>> restore-old
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -6,8 +10,13 @@
 @source "../**/*.js";
 
 @theme {
+<<<<<<< HEAD
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
     --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+=======
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-inter: 'Inter', ui-sans-serif, system-ui, sans-serif;
+>>>>>>> restore-old
     --color-gdox-bg: #0a0b14;
     --color-gdox-surface: #12131f;
     --color-gdox-card: #161726;
@@ -15,6 +24,7 @@
     --color-gdox-editor: #0d0e18;
 }
 
+<<<<<<< HEAD
 ::selection {
     background: rgba(99, 102, 241, 0.3);
 }
@@ -32,26 +42,47 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.2);
 }
+=======
+::selection { background: rgba(99, 102, 241, 0.3); }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+>>>>>>> restore-old
 
 .glass-card {
     background: rgba(22, 23, 38, 0.7);
     backdrop-filter: blur(20px);
+<<<<<<< HEAD
     border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.04);
+=======
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+>>>>>>> restore-old
 }
 .nav-glass {
     background: rgba(10, 11, 20, 0.85);
     backdrop-filter: blur(16px);
+<<<<<<< HEAD
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+=======
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+>>>>>>> restore-old
 }
 
 .input-field {
     width: 100%;
     padding: 0.75rem 1rem;
+<<<<<<< HEAD
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
+=======
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+>>>>>>> restore-old
     border-radius: 0.75rem;
     color: white;
     font-size: 0.875rem;
@@ -61,6 +92,7 @@
 .input-field:focus {
     border-color: rgba(99, 102, 241, 0.5);
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+<<<<<<< HEAD
     background: rgba(255, 255, 255, 0.06);
 }
 .input-field::placeholder {
@@ -70,16 +102,30 @@
 .btn-primary {
     padding: 0.75rem 1.5rem;
     background: linear-gradient(135deg, #0f172a, #1e3a8a);
+=======
+    background: rgba(255,255,255,0.06);
+}
+.input-field::placeholder { color: rgba(255,255,255,0.25); }
+
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+>>>>>>> restore-old
     color: white;
     border-radius: 0.75rem;
     font-weight: 600;
     font-size: 0.875rem;
     transition: all 0.25s ease;
+<<<<<<< HEAD
     box-shadow: 0 4px 15px rgba(30, 58, 138, 0.35);
+=======
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+>>>>>>> restore-old
     border: none;
     cursor: pointer;
     text-align: center;
 }
+<<<<<<< HEAD
 
 .btn-primary:hover {
     transform: translateY(-1px);
@@ -94,12 +140,25 @@
 .btn-ghost {
     padding: 0.5rem 0.75rem;
     background: rgba(255, 255, 255, 0.04);
+=======
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
+    background: linear-gradient(135deg, #7375f3, #9b6ff8);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-ghost {
+    padding: 0.5rem 0.75rem;
+    background: rgba(255,255,255,0.04);
+>>>>>>> restore-old
     color: #9ca3af;
     border-radius: 0.5rem;
     font-weight: 500;
     border: 1px solid transparent;
     cursor: pointer;
     transition: all 0.2s ease;
+<<<<<<< HEAD
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -108,13 +167,25 @@
     background: rgba(255, 255, 255, 0.08);
     color: white;
     border-color: rgba(255, 255, 255, 0.1);
+=======
+    display: flex; align-items: center; gap: 0.5rem;
+}
+.btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border-color: rgba(255,255,255,0.1);
+>>>>>>> restore-old
 }
 
 .document-card {
     position: relative;
     display: block;
     background: rgba(22, 23, 38, 0.6);
+<<<<<<< HEAD
     border: 1px solid rgba(255, 255, 255, 0.06);
+=======
+    border: 1px solid rgba(255,255,255,0.06);
+>>>>>>> restore-old
     border-radius: 0.75rem;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -123,9 +194,13 @@
 .document-card:hover {
     border-color: rgba(99, 102, 241, 0.3);
     transform: translateY(-4px);
+<<<<<<< HEAD
     box-shadow:
         0 12px 40px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(99, 102, 241, 0.15);
+=======
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(99, 102, 241, 0.15);
+>>>>>>> restore-old
 }
 
 .orb {
@@ -135,6 +210,7 @@
     opacity: 0.15;
     animation: float 20s ease-in-out infinite;
 }
+<<<<<<< HEAD
 .orb-1 {
     width: 500px;
     height: 500px;
@@ -169,12 +245,22 @@
     66% {
         transform: translate(-20px, 20px) scale(0.95);
     }
+=======
+.orb-1 { width: 500px; height: 500px; background: #6366f1; top: -200px; left: -100px; }
+.orb-2 { width: 400px; height: 400px; background: #8b5cf6; bottom: -150px; right: -100px; animation-delay: -7s; }
+.orb-3 { width: 300px; height: 300px; background: #ec4899; top: 50%; left: 50%; animation-delay: -14s; }
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -30px) scale(1.05); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+>>>>>>> restore-old
 }
 
 .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out both;
 }
 @keyframes fadeInUp {
+<<<<<<< HEAD
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -185,6 +271,16 @@
     }
 }
 
+=======
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   EDITOR NAV & TOOLBAR
+   ═══════════════════════════════════════════════════════════════════════ */
+
+>>>>>>> restore-old
 .editor-nav {
     display: flex;
     align-items: center;
@@ -192,7 +288,11 @@
     padding: 0.5rem 1rem;
     background: rgba(10, 11, 20, 0.95);
     backdrop-filter: blur(16px);
+<<<<<<< HEAD
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+=======
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+>>>>>>> restore-old
     gap: 1rem;
     z-index: 40;
 }
@@ -202,11 +302,16 @@
     align-items: center;
     padding: 0.5rem 1rem;
     background: rgba(15, 16, 25, 0.95);
+<<<<<<< HEAD
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+=======
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+>>>>>>> restore-old
     gap: 0.25rem;
     flex-wrap: wrap;
     z-index: 30;
 }
+<<<<<<< HEAD
 .toolbar-group {
     display: flex;
     align-items: center;
@@ -221,12 +326,24 @@
 .toolbar-select {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
+=======
+.toolbar-group { display: flex; align-items: center; gap: 2px; }
+.toolbar-divider {
+    width: 1px; height: 24px;
+    background: rgba(255,255,255,0.08);
+    margin: 0 0.5rem;
+}
+.toolbar-select {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+>>>>>>> restore-old
     color: #9ca3af;
     border-radius: 0.375rem;
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
     cursor: pointer;
 }
+<<<<<<< HEAD
 .toolbar-select:hover {
     background: rgba(255, 255, 255, 0.08);
 }
@@ -234,17 +351,35 @@
 .ql-toolbar.ql-snow:not(#toolbar) {
     display: none !important;
 }
+=======
+.toolbar-select:hover { background: rgba(255,255,255,0.08); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   QUILL OVERRIDES
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.ql-toolbar.ql-snow:not(#toolbar) { display: none !important; }
+>>>>>>> restore-old
 #toolbar.ql-toolbar.ql-snow {
     display: flex !important;
     background: rgba(15, 16, 25, 0.95);
     border: none !important;
+<<<<<<< HEAD
     border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+=======
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+>>>>>>> restore-old
     padding: 0.5rem 1rem;
 }
 .ql-container.ql-snow {
     border: none !important;
+<<<<<<< HEAD
     font-family: "Inter", sans-serif;
     position: relative;
+=======
+    font-family: 'Inter', sans-serif;
+    position: relative; /* needed for cursor layer */
+>>>>>>> restore-old
 }
 .ql-editor {
     font-size: 1rem;
@@ -253,6 +388,7 @@
     padding: 0 !important;
     min-height: 500px;
 }
+<<<<<<< HEAD
 .ql-editor p {
     margin-bottom: 0.75rem;
 }
@@ -279,11 +415,20 @@
 }
 .ql-editor blockquote {
     border-left: 3px solid rgba(99, 102, 241, 0.5);
+=======
+.ql-editor p { margin-bottom: 0.75rem; }
+.ql-editor h1 { font-size: 2rem; font-weight: 700; color: white; margin-bottom: 1rem; margin-top: 1.5rem; }
+.ql-editor h2 { font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 0.75rem; margin-top: 1.25rem; }
+.ql-editor h3 { font-size: 1.25rem; font-weight: 600; color: white; margin-bottom: 0.5rem; margin-top: 1rem; }
+.ql-editor blockquote {
+    border-left: 3px solid rgba(99,102,241,0.5);
+>>>>>>> restore-old
     padding-left: 1rem;
     color: #9ca3af;
     font-style: italic;
 }
 .ql-editor pre.ql-syntax {
+<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0.5rem;
@@ -392,15 +537,80 @@
 
 .ql-cursor-flag {
     font-family: "Inter", sans-serif;
+=======
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.875rem;
+    color: #a5b4fc;
+}
+.ql-editor a { color: #818cf8; text-decoration: underline; }
+.ql-editor img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+
+#toolbar .ql-formats { display: flex; gap: 2px; }
+#toolbar button {
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    background: transparent;
+    border: none; border-radius: 0.375rem;
+    color: #9ca3af; cursor: pointer;
+    transition: all 0.15s ease;
+}
+#toolbar button:hover { background: rgba(255,255,255,0.08); color: white; }
+#toolbar button.ql-active { background: rgba(99,102,241,0.2); color: #818cf8; }
+#toolbar .ql-picker { color: #9ca3af; }
+#toolbar .ql-picker-label { border: 1px solid rgba(255,255,255,0.08) !important; border-radius: 0.375rem; padding: 2px 8px; }
+#toolbar .ql-picker-label:hover { background: rgba(255,255,255,0.08); color: white; }
+#toolbar .ql-picker-options {
+    background: #1a1b2e !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+    padding: 0.25rem !important;
+}
+#toolbar .ql-picker-item { color: #e5e7eb; border-radius: 0.25rem; padding: 4px 8px !important; }
+#toolbar .ql-picker-item:hover { background: rgba(99,102,241,0.2); color: white; }
+#toolbar .ql-stroke { stroke: #9ca3af; }
+#toolbar .ql-fill { fill: #9ca3af; }
+#toolbar button:hover .ql-stroke { stroke: white; }
+#toolbar button:hover .ql-fill { fill: white; }
+#toolbar button.ql-active .ql-stroke { stroke: #818cf8; }
+#toolbar button.ql-active .ql-fill { fill: #818cf8; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   QUILL-CURSORS PLUGIN OVERRIDES
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.ql-cursor-selections .ql-cursor-selection-block { opacity: 0.25; }
+.ql-cursor-caret-container .ql-cursor-caret { animation: cursorBlink 1s infinite; }
+@keyframes cursorBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* Quill-cursors plugin flag — show it properly */
+.ql-cursor-flag {
+    font-family: 'Inter', sans-serif;
+>>>>>>> restore-old
     font-size: 11px;
     font-weight: 600;
     padding: 2px 6px;
     border-radius: 4px;
     white-space: nowrap;
+<<<<<<< HEAD
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     pointer-events: none;
 }
 
+=======
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CUSTOM REMOTE CURSOR LAYER
+   ═══════════════════════════════════════════════════════════════════════ */
+
+>>>>>>> restore-old
 .remote-cursors-layer {
     position: absolute;
     inset: 0;
@@ -434,7 +644,11 @@
     border-radius: 3px 3px 3px 0;
     background: var(--remote-cursor-color, #7c3aed);
     color: white;
+<<<<<<< HEAD
     font-family: "Inter", sans-serif;
+=======
+    font-family: 'Inter', sans-serif;
+>>>>>>> restore-old
     font-size: 10px;
     font-weight: 600;
     line-height: 1.5;
@@ -442,10 +656,15 @@
     pointer-events: none;
     opacity: 0;
     transform: translateY(4px);
+<<<<<<< HEAD
     transition:
         opacity 0.2s ease,
         transform 0.2s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+=======
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+>>>>>>> restore-old
 }
 
 .remote-cursor-flag--visible {
@@ -453,6 +672,13 @@
     transform: translateY(0);
 }
 
+<<<<<<< HEAD
+=======
+/* ═══════════════════════════════════════════════════════════════════════
+   REMOTE POINTERS
+   ═══════════════════════════════════════════════════════════════════════ */
+
+>>>>>>> restore-old
 .remote-pointer {
     position: absolute;
     top: 0;
@@ -462,9 +688,13 @@
     gap: 4px;
     pointer-events: none;
     will-change: transform;
+<<<<<<< HEAD
     transition:
         transform 80ms ease-out,
         opacity 0.4s ease;
+=======
+    transition: transform 80ms ease-out, opacity 0.4s ease;
+>>>>>>> restore-old
 }
 .remote-pointer-icon {
     width: 22px;
@@ -472,7 +702,11 @@
     fill: var(--remote-cursor-color, #7c3aed);
     stroke: white;
     stroke-width: 1.5;
+<<<<<<< HEAD
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+=======
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.45));
+>>>>>>> restore-old
 }
 .remote-pointer-label {
     margin-top: 14px;
@@ -488,14 +722,28 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+<<<<<<< HEAD
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
+=======
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   VERSION SIDEBAR
+   ═══════════════════════════════════════════════════════════════════════ */
+
+>>>>>>> restore-old
 .version-sidebar {
     width: 320px;
     min-width: 320px;
     background: rgba(15, 16, 25, 0.98);
+<<<<<<< HEAD
     border-left: 1px solid rgba(255, 255, 255, 0.06);
+=======
+    border-left: 1px solid rgba(255,255,255,0.06);
+>>>>>>> restore-old
     display: flex;
     flex-direction: column;
     animation: slideInRight 0.3s ease-out;
@@ -504,6 +752,7 @@
     display: none !important;
 }
 @keyframes slideInRight {
+<<<<<<< HEAD
     from {
         transform: translateX(100%);
         opacity: 0;
@@ -512,10 +761,15 @@
         transform: translateX(0);
         opacity: 1;
     }
+=======
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+>>>>>>> restore-old
 }
 .version-item {
     padding: 0.75rem;
     border-radius: 0.5rem;
+<<<<<<< HEAD
     border: 1px solid rgba(255, 255, 255, 0.04);
     margin-bottom: 0.5rem;
     cursor: pointer;
@@ -525,4 +779,15 @@
 .version-item:hover {
     background: rgba(99, 102, 241, 0.08);
     border-color: rgba(99, 102, 241, 0.2);
+=======
+    border: 1px solid rgba(255,255,255,0.04);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgba(255,255,255,0.02);
+}
+.version-item:hover {
+    background: rgba(99,102,241,0.08);
+    border-color: rgba(99,102,241,0.2);
+>>>>>>> restore-old
 }

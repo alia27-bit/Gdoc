@@ -62,7 +62,11 @@
             </div>
 
             <div class="p-4">
+<<<<<<< HEAD
                 <h3 class="font-semibold text-white truncate group-hover:text-blue-400 transition-colors">
+=======
+                <h3 class="font-semibold text-white truncate group-hover:text-indigo-400 transition-colors">
+>>>>>>> restore-old
                     {{ $document->title }}
                 </h3>
                 <div class="flex items-center justify-between mt-3">
@@ -70,11 +74,19 @@
                         {{ $document->updated_at->diffForHumans() }}
                     </span>
                     @if($document->owner_id === Auth::id())
+<<<<<<< HEAD
                     <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
                         Pemilik
                     </span>
                     @else
                     <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+=======
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                        Pemilik
+                    </span>
+                    @else
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+>>>>>>> restore-old
                         Dibagikan
                     </span>
                     @endif
@@ -109,8 +121,13 @@
     </div>
     @else
     <div class="text-center py-20 animate-fade-in-up">
+<<<<<<< HEAD
         <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-900/20 to-blue-500/20 border border-blue-500/10 mb-6">
             <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+=======
+        <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/10 mb-6">
+            <svg class="w-10 h-10 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+>>>>>>> restore-old
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
         </div>

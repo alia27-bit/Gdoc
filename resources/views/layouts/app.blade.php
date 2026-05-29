@@ -14,17 +14,29 @@
     <nav class="nav-glass sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="{{ route('dashboard') }}" class="flex items-center gap-3 group">
+<<<<<<< HEAD
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:shadow-indigo-500/40 transition-shadow">
+=======
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:shadow-indigo-500/40 transition-shadow">
+>>>>>>> restore-old
                     <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
                 </div>
+<<<<<<< HEAD
                 <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Gdox</span>
+=======
+                <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Gdox</span>
+>>>>>>> restore-old
             </a>
             @auth
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-3">
+<<<<<<< HEAD
                     <div class="w-9 h-9 rounded-full bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center text-sm font-semibold">
+=======
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-sm font-semibold">
+>>>>>>> restore-old
                         {{ Auth::user()->initials }}
                     </div>
                     <span class="text-sm text-gray-300 hidden sm:block">{{ Auth::user()->name }}</span>

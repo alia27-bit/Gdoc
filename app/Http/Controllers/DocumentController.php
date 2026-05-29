@@ -117,9 +117,12 @@ class DocumentController extends Controller
 
         $nextVersion = ($document->latest_version_number ?? 0) + 1;
 
+<<<<<<< HEAD
         $document->content = $request->input('content');
         $document->save();
 
+=======
+>>>>>>> restore-old
         DocumentVersion::create([
             'document_id' => $document->id,
             'content' => $request->input('content'),
@@ -127,6 +130,11 @@ class DocumentController extends Controller
             'saved_by' => Auth::id(),
         ]);
 
+<<<<<<< HEAD
+=======
+        $document->update(['content' => $request->input('content')]);
+
+>>>>>>> restore-old
         return response()->json([
             'success' => true,
             'version_number' => $nextVersion,
@@ -170,6 +178,7 @@ class DocumentController extends Controller
         ]);
     }
 
+<<<<<<< HEAD
     public function history(string $uuid)
     {
         $document = Document::where('uuid', $uuid)->firstOrFail();
@@ -203,6 +212,8 @@ class DocumentController extends Controller
         return redirect()->route('documents.history', $document->uuid)->with('success', 'Versi berhasil dipulihkan.');
     }
 
+=======
+>>>>>>> restore-old
     public function saveSnapshot(Request $request, string $uuid)
     {
         $document = Document::where('uuid', $uuid)->firstOrFail();

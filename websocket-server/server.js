@@ -4,7 +4,11 @@ const PORT = 6001;
 
 const wss = new WebSocketServer({
     port: PORT,
+<<<<<<< HEAD
     host: '0.0.0.0',
+=======
+    host: '127.0.0.1',
+>>>>>>> restore-old
 });
 
 const clients = new Map();
@@ -33,7 +37,11 @@ wss.on('close', () => {
 
 // --- Only log success AFTER the server actually binds ---
 wss.on('listening', () => {
+<<<<<<< HEAD
     console.log(`WebSocket berjalan di ws://0.0.0.0:${PORT}`);
+=======
+    console.log(`WebSocket berjalan di ws://127.0.0.1:${PORT}`);
+>>>>>>> restore-old
 });
 
 wss.on('error', (err) => {

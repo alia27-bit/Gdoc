@@ -27,17 +27,29 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
                 <span class="hidden sm:inline">Bagikan</span>
             </button>
+<<<<<<< HEAD
             <a href="{{ route('documents.history', $document->uuid) }}" class="btn-ghost text-sm flex items-center gap-2" title="Buka halaman riwayat dokumen">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 <span class="hidden sm:inline">Riwayat</span>
             </a>
+=======
+            <button id="version-history-btn" class="btn-ghost text-sm flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span class="hidden sm:inline">Riwayat</span>
+            </button>
+>>>>>>> restore-old
             <button id="save-version-btn" class="btn-ghost text-sm flex items-center gap-2">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/></svg>
                 <span class="hidden sm:inline">Simpan Versi</span>
             </button>
+<<<<<<< HEAD
             
             <div class="flex items-center -space-x-2 ml-2" id="collaborators-avatars">
                 <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 border-[#0f1019] z-10 shadow-lg" style="background: linear-gradient(135deg, #1e40af, #2563eb)" title="{{ $user->name }} (saya)">{{ $user->initials }}</div>
+=======
+            <div class="flex items-center -space-x-2 ml-2" id="collaborators-avatars">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 border-[#0f1019] z-10 shadow-lg" style="background:{{ $user->cursor_color }}" title="{{ $user->name }} (saya)">{{ $user->initials }}</div>
+>>>>>>> restore-old
             </div>
         </div>
     </nav>
@@ -52,7 +64,10 @@
             <button class="ql-italic toolbar-btn"></button>
             <button class="ql-underline toolbar-btn"></button>
             <button class="ql-strike toolbar-btn"></button>
+<<<<<<< HEAD
             
+=======
+>>>>>>> restore-old
         </div>
         <div class="toolbar-divider"></div>
         <div class="toolbar-group">
@@ -97,7 +112,10 @@
                 <button id="close-versions-btn" class="w-7 h-7 rounded-lg hover:bg-white/5 flex items-center justify-center">
                     <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
+<<<<<<< HEAD
                 
+=======
+>>>>>>> restore-old
             </div>
             <div class="overflow-y-auto flex-1 p-4" id="versions-list">
                 <div class="text-center text-gray-500 text-sm py-8">Memuat...</div>
